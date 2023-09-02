@@ -16,7 +16,7 @@ const ListingListWidget = ({ userId }) => {
 
   const getListings = async () => {
     const response = await fetch(
-      `http://localhost:3500/listings/${userId}/saved`,
+      `https://ubc-dormfinder-api-qfaf.onrender.com/listings/${userId}/saved`,
       {
         method: "GET",
         headers: { Authorization: `Bearer ${token}` },

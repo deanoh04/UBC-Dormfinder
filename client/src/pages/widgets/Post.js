@@ -47,7 +47,7 @@ const PostWidget = ({
           height="auto"
           alt="post"
           style={{ borderRadius: "0.75rem", marginTop: "0.75rem" }}
-          src={`http://localhost:3500/assets/${picturePath}`}
+          src={`https://ubc-dormfinder-api-qfaf.onrender.com/assets/${picturePath}`}
         />
       )}
     </WidgetWrapper>

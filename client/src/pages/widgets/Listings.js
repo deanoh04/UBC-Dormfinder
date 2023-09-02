@@ -9,7 +9,7 @@ const ListingsWidget = ({ userId, isProfile = false }) => {
   const token = useSelector((state) => state.token);
 
   const getListings = async () => {
-    const response = await fetch("http://localhost:3500/listings", {
+    const response = await fetch("https://ubc-dormfinder-api-qfaf.onrender.com/listings", {
       method: "GET",
       headers: { Authorization: `Bearer ${token}` },
     });
@@ -20,7 +20,7 @@ const ListingsWidget = ({ userId, isProfile = false }) => {
 
   const getUserListings = async () => {
     const response = await fetch(
-      `http://localhost:3500/listings/${userId}/saved`,
+      `https://ubc-dormfinder-api-qfaf.onrender.com/listings/${userId}/saved`,
       {
         method: "GET",
         headers: { Authorization: `Bearer ${token}` },

@@ -13,7 +13,7 @@ const ConnectionListWidget = ({ userId }) => {
 
   const getConnections = async () => {
     const response = await fetch(
-      `http://localhost:3500/users/${userId}/connections`,
+      `https://ubc-dormfinder-api-qfaf.onrender.com/users/${userId}/connections`,
       {
         method: "GET",
         headers: { Authorization: `Bearer ${token}` },

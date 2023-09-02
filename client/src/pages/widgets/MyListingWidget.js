@@ -46,7 +46,7 @@ const MyListingWidget = ({ picturePath }) => {
       formData.append("picturePath", image.name);
     }
 
-    const response = await fetch(`http://localhost:3500/listings`, {
+    const response = await fetch(`https://ubc-dormfinder-api-qfaf.onrender.com/listings`, {
       method: "POST",
       headers: { Authorization: `Bearer ${token}` },
       body: formData,

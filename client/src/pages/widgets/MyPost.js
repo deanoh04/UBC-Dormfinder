@@ -46,7 +46,7 @@ import {
         formData.append("picturePath", image.name);
       }
   
-      const response = await fetch(`http://localhost:3500/posts`, {
+      const response = await fetch(`https://ubc-dormfinder-api-qfaf.onrender.com/posts`, {
         method: "POST",
         headers: { Authorization: `Bearer ${token}` },
         body: formData,

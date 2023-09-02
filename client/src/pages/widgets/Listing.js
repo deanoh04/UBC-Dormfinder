@@ -34,7 +34,7 @@ import {
     const patchListing = async () => {
       console.log(listings)
         const response = await fetch(
-          `http://localhost:3500/listings/${loggedInUserId}/${listingId}`,
+          `https://ubc-dormfinder-api-qfaf.onrender.com/listings/${loggedInUserId}/${listingId}`,
           {
             method: "PATCH",
             headers: {
@@ -93,7 +93,7 @@ import {
             height="auto"
             alt="listing"
             style={{ borderRadius: "0.75rem", marginTop: "0.75rem" }}
-            src={`http://localhost:3500/assets/${picturePath}`}
+            src={`https://ubc-dormfinder-api-qfaf.onrender.com/assets/${picturePath}`}
           />
         )}
       </WidgetWrapper>

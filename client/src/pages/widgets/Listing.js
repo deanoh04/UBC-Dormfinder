@@ -36,6 +36,7 @@ import {
         const response = await fetch(
           `https://ubc-dormfinder-api-qfaf.onrender.com/listings/${loggedInUserId}/${listingId}`,
           {
+            mode: 'cors',
             method: "PATCH",
             headers: {
               Authorization: `Bearer ${token}`,

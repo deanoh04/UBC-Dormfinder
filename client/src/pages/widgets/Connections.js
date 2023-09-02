@@ -14,6 +14,7 @@ const ConnectionsWidget = ({ userId, isProfile = false }) => {
 
     const getUsers = async () => {
         const response = await fetch("https://ubc-dormfinder-api-qfaf.onrender.com/users", {
+            mode: 'cors',
             method: "GET",
             headers: { Authorization: `Bearer ${token}` },
         });
@@ -25,6 +26,7 @@ const ConnectionsWidget = ({ userId, isProfile = false }) => {
         const response = await fetch(
             `https://ubc-dormfinder-api-qfaf.onrender.com/posts/${userId}/connections`,
             {
+                mode: 'cors',
                 method: "GET",
                 headers: { Authorization: `Bearer ${token}` },
             }
@@ -38,6 +40,7 @@ const ConnectionsWidget = ({ userId, isProfile = false }) => {
         const response = await fetch(
             `https://ubc-dormfinder-api-qfaf.onrender.com/posts/${userId}/preferences`,
             {
+                mode: 'cors',
                 method: "GET",
                 headers: { Authorization: `Bearer ${token}` },
             }

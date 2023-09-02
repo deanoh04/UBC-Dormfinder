@@ -15,6 +15,7 @@ const ConnectionListWidget = ({ userId }) => {
     const response = await fetch(
       `https://ubc-dormfinder-api-qfaf.onrender.com/users/${userId}/connections`,
       {
+        mode: 'cors',
         method: "GET",
         headers: { Authorization: `Bearer ${token}` },
       }

@@ -21,6 +21,7 @@ const PostsWidget = ({ userId, isProfile = false }) => {
     const response = await fetch(
       `https://ubc-dormfinder-api-qfaf.onrender.com/posts/${userId}/posts`,
       {
+        mode: 'cors',
         method: "GET",
         headers: { Authorization: `Bearer ${token}` },
       }

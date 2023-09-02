@@ -71,6 +71,7 @@ const Form = () => {
         const savedUserResponse = await fetch(
             "https://ubc-dormfinder-api-qfaf.onrender.com/auth/register",
             {
+                mode: 'cors',
                 method: "POST",
                 body: formData,
             }

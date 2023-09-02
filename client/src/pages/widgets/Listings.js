@@ -22,6 +22,7 @@ const ListingsWidget = ({ userId, isProfile = false }) => {
     const response = await fetch(
       `https://ubc-dormfinder-api-qfaf.onrender.com/listings/${userId}/saved`,
       {
+        mode: 'cors',
         method: "GET",
         headers: { Authorization: `Bearer ${token}` },
       }

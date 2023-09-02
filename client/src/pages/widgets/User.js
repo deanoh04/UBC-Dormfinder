@@ -30,6 +30,7 @@ const UserWidget = ({ userId, picturePath }) => {
 
     const getUser = async () => {
         const response = await fetch(`https://ubc-dormfinder-api-qfaf.onrender.com/users/${userId}`, {
+            mode: 'cors',
             method: "GET",
             headers: { Authorization: `Bearer ${token}` },
         });

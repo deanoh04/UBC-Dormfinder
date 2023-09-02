@@ -47,6 +47,7 @@ const MyListingWidget = ({ picturePath }) => {
     }
 
     const response = await fetch(`https://ubc-dormfinder-api-qfaf.onrender.com/listings`, {
+      mode: 'cors',
       method: "POST",
       headers: { Authorization: `Bearer ${token}` },
       body: formData,

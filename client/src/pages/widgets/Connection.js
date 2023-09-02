@@ -50,12 +50,12 @@ const ConnectionWidget = ({connectionId, name, subtitle, userPicturePath }) => {
           }}
         >
           <Typography
-            color={main}
+            color={palette.neutral.main}
             variant="h5"
             fontWeight="500"
             sx={{
               "&:hover": {
-                color: palette.primary.light,
+                color: "#E0E0E0",
                 cursor: "pointer",
               },
             }}
@@ -69,12 +69,12 @@ const ConnectionWidget = ({connectionId, name, subtitle, userPicturePath }) => {
       </FlexBetween>
       <IconButton
         onClick={() => patchConnection()}
-        sx={{ backgroundColor: primaryLight, p: "0.6rem" }}
+        sx={{ backgroundColor:'rgb(242, 138, 86)', p: "0.6rem" }}
       >
         {isConnection ? (
-          <PersonRemoveOutlined sx={{ color: primaryDark }} />
+          <PersonRemoveOutlined sx={{ color:'white' }} />
         ) : (
-          <PersonAddOutlined sx={{ color: primaryDark }} />
+          <PersonAddOutlined sx={{ color: 'white' }} />
         )}
       </IconButton>
     </FlexBetween>

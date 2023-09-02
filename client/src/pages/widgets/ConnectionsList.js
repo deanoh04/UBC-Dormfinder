@@ -30,7 +30,7 @@ const ConnectionListWidget = ({ userId }) => {
   return (
     <Wrapper>
       <Typography
-        color={palette.neutral.dark}
+        color='black'
         variant="h5"
         fontWeight="500"
         sx={{ mb: "1.5rem" }}

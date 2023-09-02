@@ -8,11 +8,13 @@ const Login = () => {
       <Box>
         <Box
           width="100%"
-          backgroundColor={theme.palette.background.alt}
+          backgroundColor="white"
           p="1rem 6%"
           textAlign="center"
+          boxShadow="rgba(236, 176, 178, 0.8) 0px 4px 12px"
+          borderRadius="0 0 30px 30px"
         >
-          <Typography fontWeight="bold" fontSize="32px" color="primary">
+          <Typography fontWeight="bold" fontSize="32px" color='rgb(242, 138, 86)'>
             UBC Dorm finder
           </Typography>
         </Box>
@@ -22,7 +24,8 @@ const Login = () => {
           p="2rem"
           m="2rem auto"
           borderRadius="1.5rem"
-          backgroundColor={theme.palette.background.alt}
+          backgroundColor="white"
+          boxShadow="rgba(236, 176, 178, 0.8) 0px 4px 12px"
         >
           <Typography fontWeight="500" variant="h5" sx={{ mb: "1.5rem" }}>
             This is UBC Dorm Finder, where you can find roomates and rooms !

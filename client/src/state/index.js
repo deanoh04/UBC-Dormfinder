@@ -5,6 +5,7 @@ const globalState = {
     user: null,
     token: null,
     posts: [],
+    listings: [],
     allUsers: [],
 };
 
@@ -35,11 +36,12 @@ export const authSlice = createSlice({
             }
         },
         setListings: (state, action) => {
-            if (state.user) {
-                state.user.listings = action.payload.listings;
-            } else {
-                console.error("connection doesn't exist")
-            }
+            state.listings = action.payload.listings
+        },
+        setUserlistings: (state, action) => {
+                state.user.listings = action.payload.listings
+
+            
         },
         setPosts: (state, action) => {
             state.posts = action.payload.posts
@@ -50,11 +52,17 @@ export const authSlice = createSlice({
                 return post;
             })
         },
+        setListing: (state, action) => {
+            const updatedListing = state.listings.map((listing) => {
+                if (listing._id === action.payload.listing_id) return action.payload.listing;
+                return listing;
+            })
+        },
         setUsers: (state, action) => {
             state.allUsers = action.payload.allUsers
         }
     }
 })
 
-export const {setLogin, setPreferences, setLogout, setConnections, setListings, setPosts, setPost, setUsers } = authSlice.actions;
+export const {setLogin, setPreferences, setLogout, setConnections, setListings, setPosts, setPost, setListing, setUsers, setUserlistings } = authSlice.actions;
 export default authSlice.reducer;

@@ -14,7 +14,7 @@ const userRoutes = require('./routes/users.js');
 const { verifyJWT } = require('./middleware/auth.js');
 const postRoutes = require('./routes/posts.js')
 const listingRoutes = require('./routes/listings.js')
-const {saveListing} = require('./controllers/listingsController.js')
+const {createListing} = require('./controllers/listingsController.js')
 const { createPost } = require('./controllers/postsController.js')
 
 //Middleware
@@ -46,7 +46,7 @@ const upload = multer({storage})
 //File routes
 app.post("/auth/register", upload.single('picture'), authController.register);
 app.post("/posts", verifyJWT, upload.single('picture'), createPost)
-app.post("/listings/:id", verifyJWT, upload.single('picture'), saveListing)
+app.post("/listings", verifyJWT, upload.single('picture'), createListing)
 
 //Routes
 app.use('/auth', authRoutes);

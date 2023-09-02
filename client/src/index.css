@@ -7,4 +7,6 @@ body,
   height: 100%;
   width: 100%;
   font-family: 'Roboto', sans-serif;
+  background: linear-gradient(90deg, rgb(244, 225, 228) 12.82%, rgb(255, 230, 220) 91.48%);
+  color: rgb(35, 35, 35)
 }

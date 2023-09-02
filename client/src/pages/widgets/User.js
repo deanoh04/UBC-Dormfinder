@@ -72,11 +72,11 @@ const UserWidget = ({ userId, picturePath }) => {
                     <Box>
                         <Typography
                             variant="h4"
-                            color={dark}
+                            color={palette.neutral.main}
                             fontWeight="500"
                             sx={{
                                 "&:hover": {
-                                    color: palette.primary.light,
+                                    color: '#E0E0E0',
                                     cursor: "pointer",
                                 },
                             }}

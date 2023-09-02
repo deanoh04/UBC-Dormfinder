@@ -4,10 +4,11 @@ import {BrowserRouter as Router, Routes, Route} from 'react-router-dom'
 import Layout from "./layout";
 
 import Nav from "pages/nav";
-import MyPostWidget from "pages/widgets/MyPost";
-import PostsWidget from "pages/widgets/Posts";
 import UserWidget from "pages/widgets/User";
 import { useSelector } from "react-redux";
+import MyListingWidget from 'pages/widgets/MyListingWidget';
+import ListingsWidget from 'pages/widgets/Listings';
+import ListingListWidget from 'pages/widgets/ListingList';
 
 const Listings = () => {
     const isNonMobileScreens = useMediaQuery("(min-width:1000px)")
@@ -28,7 +29,17 @@ const Listings = () => {
                 flexBasis={isNonMobileScreens ? "42%" : undefined}
                 mt={isNonMobileScreens ? undefined : "2rem"}
             >
-               <div>hallo</div>
+               <ListingsWidget userId={_id} />
+                
+            </Box>
+
+            <Box
+                flexBasis={isNonMobileScreens ? "42%" : undefined}
+                mt={isNonMobileScreens ? undefined : "2rem"}
+            >
+                <MyListingWidget picturePath={picturePath} />
+                <Box m="2rem 0" />
+                <ListingListWidget userId={_id} />
                 
             </Box>
                 

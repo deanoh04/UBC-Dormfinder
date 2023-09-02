@@ -2,8 +2,19 @@ import { createTheme } from "@mui/material/styles";
 
 
 export const themeSettings = createTheme({
+  overrides: {
+    MuiCssBaseline: {
+      '@global': {
+         body: {
+           background: 'linear-gradient(to right, #FF416C, #FF4B2B)',
+           backgroundRepeat: "no-repeat",
+           backgroundAttachment: "fixed",
+        },
+      },
+    },
+  },
       palette: {
-        mode: 'dark',
+        mode: 'light',
         primary: {
           dark: '#99EEFD',
           main: '#00D5FA',
@@ -11,9 +22,9 @@ export const themeSettings = createTheme({
         },
         neutral: {
           dark: '#E0E0E0',
-          main: '#C2C2C2',
+          main: 'rgb(35, 35, 35)',
           mediumMain: '#A3A3A3',
-          medium: '#858585',
+          medium: 'rgb(35, 35, 35)',
           light: '#333333',
         },
         background: {

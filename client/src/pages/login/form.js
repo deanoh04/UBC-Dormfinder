@@ -168,11 +168,12 @@ const Form = () => {
                                     sx={{ gridColumn: "span 4" }}
                                 />
                                 <Box gridColumn="span 4"
-                                    border={`1px solid ${palette.neutral.medium}`}
+                                    border={`1px solid #A3A3A3`}
                                     borderRadius="5px"
                                     p="1rem">
                                     <InputLabel id="sleep">Sleep</InputLabel>
                                     <Select
+                                    width="100px"
                                         gridColumn="span 4"
                                         labelId="sleep-label"
                                         id="sleep"
@@ -229,7 +230,7 @@ const Form = () => {
                                 </Box>
                                 <Box
                                     gridColumn="span 4"
-                                    border={`1px solid ${palette.neutral.medium}`}
+                                    border={`1px solid #A3A3A3`}
                                     borderRadius="5px"
                                     p="1rem"
                                 >
@@ -294,8 +295,8 @@ const Form = () => {
                             sx={{
                                 m: "2rem 0",
                                 p: "1rem",
-                                backgroundColor: palette.primary.main,
-                                color: palette.background.alt,
+                                backgroundColor:'rgb(242, 138, 86)',
+                                color: 'white',
                                 "&:hover": { color: palette.primary.main },
                             }}
                         >

@@ -2,7 +2,7 @@ import { Box, useMediaQuery } from "@mui/material";
 import {BrowserRouter as Router, Routes, Route} from 'react-router-dom'
 import Layout from "./layout";
 import Default from "./default";
-import Listings from "pages/widgets/Listings";
+import Listings from "./listings"
 
 import Nav from "pages/nav";
 import MyPostWidget from "pages/widgets/MyPost";

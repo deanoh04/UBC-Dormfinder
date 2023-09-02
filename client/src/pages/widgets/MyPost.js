@@ -59,17 +59,22 @@ import {
   
     return (
       <WidgetWrapper>
-        <FlexBetween gap="1.5rem">
+        <FlexBetween gap="1.5rem" sx={{
+          "&:focus": {
+            backgroundColor: "rgb(255, 243, 238)"
+          }
+        }}>
           <UserImage image={picturePath} />
-          <InputBase
+          <InputBase 
             placeholder="Share with the UBC rental community"
             onChange={(e) => setPost(e.target.value)}
             value={post}
             sx={{
               width: "100%",
-              backgroundColor: palette.neutral.light,
+              backgroundColor: "rgb(255, 243, 238)",
               borderRadius: "2rem",
               padding: "1rem 2rem",
+              color: "black",
             }}
           />
         </FlexBetween>
@@ -125,41 +130,20 @@ import {
             <ImageOutlined sx={{ color: mediumMain }} />
             <Typography
               color={mediumMain}
-              sx={{ "&:hover": { cursor: "pointer", color: medium } }}
+              sx={{ "&:hover": { cursor: "pointer", opacity: '70%' } }}
             >
               Image
             </Typography>
           </FlexBetween>
   
-          {isNonMobileScreens ? (
-            <>
-              <FlexBetween gap="0.25rem">
-                <GifBoxOutlined sx={{ color: mediumMain }} />
-                <Typography color={mediumMain}>Clip</Typography>
-              </FlexBetween>
-  
-              <FlexBetween gap="0.25rem">
-                <AttachFileOutlined sx={{ color: mediumMain }} />
-                <Typography color={mediumMain}>Attachment</Typography>
-              </FlexBetween>
-  
-              <FlexBetween gap="0.25rem">
-                <MicOutlined sx={{ color: mediumMain }} />
-                <Typography color={mediumMain}>Audio</Typography>
-              </FlexBetween>
-            </>
-          ) : (
-            <FlexBetween gap="0.25rem">
-              <MoreHorizOutlined sx={{ color: mediumMain }} />
-            </FlexBetween>
-          )}
+        
   
           <Button
             disabled={!post}
             onClick={handlePost}
             sx={{
-              color: palette.background.alt,
-              backgroundColor: palette.primary.main,
+              color: "rgb(255, 255, 255)",
+              background: "rgb(242, 138, 86)",
               borderRadius: "3rem",
             }}
           >

@@ -20,7 +20,6 @@ const FilterWidget = () => {
     const { palette } = useTheme();
     const neutralLight = theme.palette.neutral.light;
     const filterByCrit = (crit, value) => {
-      getUsers()
       const filteredUsers = users.filter((user) => {
         const prefs = user.preferences[0].split(',')
         if (crit == 'sleep') {
@@ -57,7 +56,7 @@ const FilterWidget = () => {
   return (
     <Wrapper>
       <Typography
-        color={palette.neutral.dark}
+        color='black'
         variant="h5"
         fontWeight="500"
         sx={{ mb: "1.5rem" }}
@@ -69,7 +68,7 @@ const FilterWidget = () => {
     <Select
       value={filler}
       sx={{
-        backgroundColor: neutralLight,
+        backgroundColor: "rgb(255, 243, 238)",
         width: "150px",
         borderRadius: "0.25rem",
         p: "0.25rem 1rem",
@@ -78,7 +77,7 @@ const FilterWidget = () => {
           width: "3rem",
         },
         "& .MuiSelect-select:focus": {
-          backgroundColor: neutralLight,
+          backgroundColor: "rgb(255, 243, 238)",
         },
       }}
       input={<InputBase />}
@@ -105,7 +104,7 @@ const FilterWidget = () => {
     <Select
       value={filler}
       sx={{
-        backgroundColor: neutralLight,
+        backgroundColor: "rgb(255, 243, 238)",
         width: "150px",
         borderRadius: "0.25rem",
         p: "0.25rem 1rem",
@@ -114,7 +113,7 @@ const FilterWidget = () => {
           width: "3rem",
         },
         "& .MuiSelect-select:focus": {
-          backgroundColor: neutralLight,
+          backgroundColor: "rgb(255, 243, 238)",
         },
       }}
       input={<InputBase />}
@@ -138,7 +137,7 @@ const FilterWidget = () => {
     <Select
       value={filler}
       sx={{
-        backgroundColor: neutralLight,
+        backgroundColor: "rgb(255, 243, 238)",
         width: "150px",
         borderRadius: "0.25rem",
         p: "0.25rem 1rem",
@@ -147,7 +146,7 @@ const FilterWidget = () => {
           width: "3rem",
         },
         "& .MuiSelect-select:focus": {
-          backgroundColor: neutralLight,
+          backgroundColor: "rgb(255, 243, 238)",
         },
       }}
       input={<InputBase />}
@@ -166,8 +165,14 @@ const FilterWidget = () => {
       </MenuItem>
     </Select>
   </FormControl>
-  <Button onClick={filterByMyPrefs}>Filter By My Preferences</Button>
-  <Button onClick={getUsers}>Reset Filters</Button>
+  <Button onClick={filterByMyPrefs} sx={{
+    backgroundColor: "rgb(242, 138, 86)",
+    color: "white"
+  }} >Filter By My Preferences</Button>
+  <Button onClick={getUsers} sx={{
+    backgroundColor: "rgb(242, 138, 86)",
+    color: "white"
+  }}>Reset Filters</Button>
       </Box>
     </Wrapper>
     

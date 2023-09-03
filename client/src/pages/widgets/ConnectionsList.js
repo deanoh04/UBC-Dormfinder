@@ -13,7 +13,7 @@ const ConnectionListWidget = ({ userId }) => {
 
   const getConnections = async () => {
     const response = await fetch(
-      `https://ubc-dormfinder-api-qfaf.onrender.com/users/${userId}/connections`,
+      `https://ubc-dormfinder-api-s8ez.onrender.com/users/${userId}/connections`,
       {
         mode: 'cors',
         method: "GET",

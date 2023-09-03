@@ -8,7 +8,7 @@ const UserImage = ({ image, size = "60px" }) => {
         width={size}
         height={size}
         alt="user"
-        src={`https://ubc-dormfinder-api-qfaf.onrender.com/assets/${image}`}
+        src={`https://ubc-dormfinder-api-s8ez.onrender.com/assets/${image}`}
       />
     </Box>
   );

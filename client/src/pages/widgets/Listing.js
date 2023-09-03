@@ -34,7 +34,7 @@ import {
     const patchListing = async () => {
       console.log(listings)
         const response = await fetch(
-          `https://ubc-dormfinder-api-qfaf.onrender.com/listings/${loggedInUserId}/${listingId}`,
+          `https://ubc-dormfinder-api-s8ez.onrender.com/listings/${loggedInUserId}/${listingId}`,
           {
             mode: 'cors',
             method: "PATCH",
@@ -94,7 +94,7 @@ import {
             height="auto"
             alt="listing"
             style={{ borderRadius: "0.75rem", marginTop: "0.75rem" }}
-            src={`https://ubc-dormfinder-api-qfaf.onrender.com/assets/${picturePath}`}
+            src={`https://ubc-dormfinder-api-s8ez.onrender.com/assets/${picturePath}`}
           />
         )}
       </WidgetWrapper>

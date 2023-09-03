@@ -16,7 +16,7 @@ const ListingListWidget = ({ userId }) => {
 
   const getListings = async () => {
     const response = await fetch(
-      `https://ubc-dormfinder-api-qfaf.onrender.com/listings/${userId}/saved`,
+      `https://ubc-dormfinder-api-s8ez.onrender.com/listings/${userId}/saved`,
       {
         mode: 'cors',
         method: "GET",

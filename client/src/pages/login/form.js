@@ -69,7 +69,7 @@ const Form = () => {
         formData.append("picturePath", values.picture.name);
 
         const savedUserResponse = await fetch(
-            "https://ubc-dormfinder-api-qfaf.onrender.com/auth/register",
+            "https://ubc-dormfinder-api-s8ez.onrender.com/auth/register",
             {
                 mode: 'cors',
                 method: "POST",
@@ -85,7 +85,8 @@ const Form = () => {
     };
 
     const login = async (values, onSubmitProps) => {
-        const loggedInResponse = await fetch("https://ubc-dormfinder-api-qfaf.onrender.com/auth/login", {
+        const loggedInResponse = await fetch("https://ubc-dormfinder-api-s8ez.onrender.com/auth/login", {
+            mode: 'cors',
             method: "POST",
             headers: { "Content-Type": "application/json" },
             body: JSON.stringify(values),

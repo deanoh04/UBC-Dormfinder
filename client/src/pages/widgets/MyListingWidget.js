@@ -46,7 +46,7 @@ const MyListingWidget = ({ picturePath }) => {
       formData.append("picturePath", image.name);
     }
 
-    const response = await fetch(`https://ubc-dormfinder-api-qfaf.onrender.com/listings`, {
+    const response = await fetch(`https://ubc-dormfinder-api-s8ez.onrender.com/listings`, {
       mode: 'cors',
       method: "POST",
       headers: { Authorization: `Bearer ${token}` },

@@ -13,7 +13,7 @@ const ConnectionsWidget = ({ userId, isProfile = false }) => {
     const token = useSelector((state) => state.token);
 
     const getUsers = async () => {
-        const response = await fetch("https://ubc-dormfinder-api-qfaf.onrender.com/users", {
+        const response = await fetch("https://ubc-dormfinder-api-s8ez.onrender.com/users", {
             mode: 'cors',
             method: "GET",
             headers: { Authorization: `Bearer ${token}` },
@@ -24,7 +24,7 @@ const ConnectionsWidget = ({ userId, isProfile = false }) => {
 
     const getUserConnections = async () => {
         const response = await fetch(
-            `https://ubc-dormfinder-api-qfaf.onrender.com/posts/${userId}/connections`,
+            `https://ubc-dormfinder-api-s8ez.onrender.com/posts/${userId}/connections`,
             {
                 mode: 'cors',
                 method: "GET",
@@ -38,7 +38,7 @@ const ConnectionsWidget = ({ userId, isProfile = false }) => {
 
     const getUserPreferences = async () => {
         const response = await fetch(
-            `https://ubc-dormfinder-api-qfaf.onrender.com/posts/${userId}/preferences`,
+            `https://ubc-dormfinder-api-s8ez.onrender.com/posts/${userId}/preferences`,
             {
                 mode: 'cors',
                 method: "GET",

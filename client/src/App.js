@@ -6,6 +6,7 @@ import Login from 'pages/login'
 import Profile from 'pages/profile'
 import Nav from 'pages/nav'
 import { useSelector } from 'react-redux';
+import ProfilePage from 'pages/profile';
 
 function App() {
 
@@ -20,7 +21,7 @@ function App() {
 
         <Route path='/' element={<Login />} />
         <Route path='/home*' element={isLogged ? <Home /> : <Navigate to="/" />} />
-        <Route path='/profile' element={isLogged ? <Profile /> : <Navigate to="/" />} />
+        <Route path='/profile/:userId' element={isLogged ? <ProfilePage /> : <Navigate to="/" />} />
       </Routes>
       </ThemeProvider>
      </Router>

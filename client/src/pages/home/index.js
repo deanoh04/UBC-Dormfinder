@@ -8,6 +8,7 @@ import Nav from "pages/nav";
 import MyPostWidget from "pages/widgets/MyPost";
 import PostsWidget from "pages/widgets/Posts";
 import UserWidget from "pages/widgets/User";
+import ProfilePage from "pages/profile";
 import Connections from "./connections";
 
 import { useSelector } from "react-redux";
